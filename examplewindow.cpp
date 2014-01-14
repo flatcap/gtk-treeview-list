@@ -7,7 +7,7 @@ ExampleWindow::ExampleWindow() :
 {
 	set_title("Gtk::TreeView (ListStore) example");
 	set_border_width(5);
-	set_default_size(400, 200);
+	set_default_size(500, 200);
 
 	add(m_VBox);
 
