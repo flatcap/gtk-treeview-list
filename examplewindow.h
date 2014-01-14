@@ -14,9 +14,11 @@ protected:
 	Gtk::TreeModelColumn<Glib::ustring> m_col_name;
 	Gtk::TreeModelColumn<short>         m_col_number;
 	Gtk::TreeModelColumn<int>           m_col_percentage;
+	Gtk::TreeModelColumn<Glib::ustring> m_col_suffix;
 
 	Gtk::TreeModel::ColumnRecord m_Columns;
 
+	Gtk::Box m_Box;
 	Gtk::TreeView m_TreeView;
 	Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
 };
