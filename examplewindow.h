@@ -1,23 +1,18 @@
-#ifndef GTKMM_EXAMPLEWINDOW_H
-#define GTKMM_EXAMPLEWINDOW_H
+#ifndef _EXAMPLEWINDOW_H_
+#define _EXAMPLEWINDOW_H_
 
 #include <gtkmm.h>
 
 class ExampleWindow : public Gtk::Window
 {
 public:
-	ExampleWindow();
-	virtual ~ExampleWindow();
+	ExampleWindow (void);
+	~ExampleWindow() = default;
 
 protected:
-	//Signal handlers:
-	void on_button_quit();
-
-	//Tree model columns:
 	class ModelColumns : public Gtk::TreeModel::ColumnRecord
 	{
 	public:
-
 		ModelColumns()
 		{
 			add (m_col_id);
@@ -34,15 +29,11 @@ protected:
 
 	ModelColumns m_Columns;
 
-	//Child widgets:
 	Gtk::Box m_VBox;
 
-	Gtk::ScrolledWindow m_ScrolledWindow;
 	Gtk::TreeView m_TreeView;
 	Glib::RefPtr<Gtk::ListStore> m_refTreeModel;
-
-	Gtk::ButtonBox m_ButtonBox;
-	Gtk::Button m_Button_Quit;
 };
 
-#endif //GTKMM_EXAMPLEWINDOW_H
+#endif // _EXAMPLEWINDOW_H_
+
