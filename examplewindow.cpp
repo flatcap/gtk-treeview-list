@@ -22,8 +22,8 @@ ExampleWindow::ExampleWindow (void)
 
 	m_TreeView.append_column         ("ID",     m_col_id);			// 0
 	m_TreeView.append_column         ("Name",   m_col_name);		// 1
-	m_TreeView.append_column_numeric ("Number", m_col_number, "%05d");	// 3
-	m_TreeView.append_column         ("Hybrid", m_col_percentage);		// 2
+	m_TreeView.append_column_numeric ("Number", m_col_number, "%05d");	// 2
+	m_TreeView.append_column         ("Hybrid", m_col_percentage);		// 3
 
 	Gtk::TreeViewColumn* pColumn;
 
