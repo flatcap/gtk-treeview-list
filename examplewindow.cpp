@@ -31,15 +31,17 @@ ExampleWindow::ExampleWindow (void)
 
 	m_TreeView.append_column         ("ID",     m_col_id);			// 0
 	m_TreeView.append_column         ("Name",   m_col_name);		// 1
-	m_TreeView.append_column_numeric ("Number", m_col_number, "%05d");	// 2
+	m_TreeView.append_column_numeric ("Number", m_col_number, "%d%%");	// 2
 	m_TreeView.append_column         ("Hybrid", m_col_percentage);		// 3
 
 	Gtk::TreeViewColumn* pColumn;
 
+	pColumn = m_TreeView.get_column(2);
+	pColumn->get_first_cell()->set_alignment(1.0, 0.5);
+
 	pColumn = m_TreeView.get_column(3);
 	pColumn->pack_end (m_col_suffix, false);
 	pColumn->get_first_cell()->set_alignment(1.0, 0.5);
-	pColumn->set_alignment (1.0);
 
 #if 0
 	std::vector<Gtk::CellRenderer*> v = pColumn->get_cells();
